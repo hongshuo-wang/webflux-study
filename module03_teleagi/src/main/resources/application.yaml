@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: teleagi-server
+  ai:
+    teleagi:
+      chat:
+        app-id: cef6c042c5ba41bfba231619baf8a095
+        app-key: 56ead2de2713469fa82af4056b9884c3
+        options:
+          model: telechat-35b
+          max-completion-tokens: 2048
+server:
+  port: 8888
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8 # 必须设置 UTF-8，避免 WebFlux 流式返回（AI 场景）会乱码问题
+      force: true
+
+
